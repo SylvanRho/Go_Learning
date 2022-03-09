@@ -56,6 +56,7 @@ func SliceDemo() {
 	SliceDemo02()
 	SliceDemo03()
 	SliceDemo04()
+	SliceAppendDemo()
 }
 
 //1、对数组进行片段截取 主要有如下两种写法
@@ -74,6 +75,7 @@ func SliceDemo01() {
 
 //2、从头声明赋值（例子如下）
 func SliceDemo02() {
+	//切片是引用类型，所以你不对它进行赋值的话，它的零值（默认值）是 nil
 	var strList []string
 	var numList []int
 	var numListEmpty = []int{}
@@ -96,4 +98,20 @@ func SliceDemo04() {
 	a := []int{4: 2}
 	fmt.Println(a)
 	fmt.Println(len(a), cap(a))
+}
+
+//切片追加Demo
+func SliceAppendDemo() {
+	myarr := []int{1}
+	// 追加一个元素
+	myarr = append(myarr, 2)
+	// 追加多个元素
+	myarr = append(myarr, 3, 4)
+	// 追加一个切片, ... 表示解包，不能省略
+	myarr = append(myarr, []int{7, 8}...)
+	// 在第一个位置插入元素
+	myarr = append([]int{0}, myarr...)
+	// 在中间插入一个切片(两个元素)
+	myarr = append(myarr[:5], append([]int{5, 6}, myarr[5:]...)...)
+	fmt.Println(myarr)
 }
