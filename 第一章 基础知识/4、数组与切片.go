@@ -64,11 +64,11 @@ func SliceDemo01() {
 	myarr := [5]int{1, 2, 3, 4, 5}
 	fmt.Printf("myarr 的长度为：%d，容量为：%d\n", len(myarr), cap(myarr))
 
-	mysli1 := myarr[1:3] //3的含义为 索引为2（3减1）的元素
+	mysli1 := myarr[1:3] //3的含义为 索引为2，内容为[2 3]（3减1，等于到下标3的位置但是下标三不包含）的元素
 	fmt.Printf("mysli1 的长度为：%d，容量为：%d\n", len(mysli1), cap(mysli1))
 	fmt.Println(mysli1)
 
-	mysli2 := myarr[1:3:4] //4的含义为容量范围从下标1到下标四
+	mysli2 := myarr[1:3:4] //4的含义为容量范围从下标1到下标四，长度为3（4减1，等于到下标4的位置 但是下标四的位置不包括）
 	fmt.Printf("mysli2 的长度为：%d，容量为：%d\n", len(mysli2), cap(mysli2))
 	fmt.Println(mysli2)
 }
