@@ -18,6 +18,7 @@ func main() {
 	//important note⚠️：Go编译器，对于 { 和 } 的位置有严格的要求，它要求 else if （或 else）和 两边的花括号，必须在同一行。
 	onlyIf_Else()
 	moreIf_Else()
+	advancedIf_Else()
 }
 
 //单分支if-else
@@ -50,8 +51,10 @@ func moreIf_Else() {
 	}
 }
 
+//高级If-Else
 func advancedIf_Else() {
+	//声明一个变量以后 再判断
 	if age := 20; age > 18 {
-		fmt.Println("已经是成年人啦！")
+		fmt.Printf("年龄是：%d 已经是成年人啦！", age)
 	}
 }
