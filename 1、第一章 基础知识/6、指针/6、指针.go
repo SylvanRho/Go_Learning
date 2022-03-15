@@ -46,7 +46,6 @@ func PointerCreateDemo() {
 	//打印指针地址方法有两种
 	// 第一种
 	// fmt.Printf("%p", ptr)
-
 	// 第二种
 	// fmt.Println(ptr)
 }
