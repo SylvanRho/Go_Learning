@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [{
+            "name": "LaunchGo",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${fileDirname}",
+            // "env": {
+            //     "GOPATH": "填自己的GOPATH路径",
+            //     "GOROOT": "填自己的GOROOT路径"
+            // },
+            "args": [],
+            //"showLog": true
+        }
+    ]
+}
