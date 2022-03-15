@@ -12,12 +12,13 @@ func main() {
 
 //1、数组
 func ArrDemo() {
-	fmt.Println(`\n*******Array数组*******\n`)
+	fmt.Printf("\n*******Array数组*******\n")
 	var arr [3]int
 	arr[0] = 1
 	arr[1] = 2
 	arr[2] = 3
 
+	// 初始化数组的几种方法
 	// 第一种方法
 	var arr2 [3]int = [3]int{1, 2, 3}
 	fmt.Printf("arr2 [0] value：%d\n", arr2[0])
@@ -47,7 +48,7 @@ func ArrDemo() {
 
 //2、切片
 func SliceDemo() {
-	fmt.Println(`\n*******Slice切片*******\n`)
+	fmt.Printf("\n*******Slice切片*******\n")
 	myarr01 := [...]int{1, 2, 3}
 	fmt.Printf("%d 的类型是: %T\n", myarr01[0:2], myarr01[0:2])
 
@@ -61,6 +62,7 @@ func SliceDemo() {
 
 //1、对数组进行片段截取 主要有如下两种写法
 func SliceDemo01() {
+	fmt.Printf("\n**********SliceDemo01**********\n")
 	myarr := [5]int{1, 2, 3, 4, 5}
 	fmt.Printf("myarr 的长度为：%d，容量为：%d\n", len(myarr), cap(myarr))
 
@@ -75,6 +77,7 @@ func SliceDemo01() {
 
 //2、从头声明赋值（例子如下）
 func SliceDemo02() {
+	fmt.Printf("\n**********SliceDemo02**********\n")
 	//切片是引用类型，所以你不对它进行赋值的话，它的零值（默认值）是 nil
 	var strList []string
 	var numList []int
@@ -86,6 +89,7 @@ func SliceDemo02() {
 
 //3、make函数构造
 func SliceDemo03() {
+	fmt.Printf("\n**********SliceDemo03**********\n")
 	a := make([]int, 5)
 	b := make([]int, 2, 10)
 	fmt.Println(a, b)
@@ -95,6 +99,7 @@ func SliceDemo03() {
 
 //4、偷懒的写法
 func SliceDemo04() {
+	fmt.Printf("\n**********SliceDemo04**********\n")
 	a := []int{4: 2}
 	fmt.Println(a)
 	fmt.Println(len(a), cap(a))
@@ -102,6 +107,7 @@ func SliceDemo04() {
 
 //切片追加Demo
 func SliceAppendDemo() {
+	fmt.Printf("\n**********SliceAppendDemo**********\n")
 	myarr := []int{1}
 	// 追加一个元素
 	myarr = append(myarr, 2)
