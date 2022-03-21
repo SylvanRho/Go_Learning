@@ -55,7 +55,9 @@ func reflectDemo02() {
 
 	//⚠️只有 Value 才能逆向转换，而 Type 则不行，这也很容易理解，如果 Type 能逆向，那么逆向成什么呢？
 	// 从反射对象到接口变量
-	i := v.Interface()
+	// i := v.Interface()
+	//如果使用下面这个 类型不对 要进panic
+	i := v.Interface().(int)
 	fmt.Printf("从反射对象到接口变量：新对象的类型为 %T 值为 %v \n", i, i)
 }
 
