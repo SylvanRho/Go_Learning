@@ -82,3 +82,41 @@ fmt.Println(s) //输出结果为
 // 同样的效果
 fmt.Fprintf(os.Stderr, "an %s\n", "error") //输出结果为 an error
 ```
+
+## 特有名词
+``` go
+var LintGonicMapper = GonicMapper{
+    "API":   true,
+    "ASCII": true,
+    "CPU":   true,
+    "CSS":   true,
+    "DNS":   true,
+    "EOF":   true,
+    "GUID":  true,
+    "HTML":  true,
+    "HTTP":  true,
+    "HTTPS": true,
+    "ID":    true,
+    "IP":    true,
+    "JSON":  true,
+    "LHS":   true,
+    "QPS":   true,
+    "RAM":   true,
+    "RHS":   true,
+    "RPC":   true,
+    "SLA":   true,
+    "SMTP":  true,
+    "SSH":   true,
+    "TLS":   true,
+    "TTL":   true,
+    "UI":    true,
+    "UID":   true,
+    "UUID":  true,
+    "URI":   true,
+    "URL":   true,
+    "UTF8":  true,
+    "VM":    true,
+    "XML":   true,
+    "XSRF":  true,
+    "XSS":   true,
+```
