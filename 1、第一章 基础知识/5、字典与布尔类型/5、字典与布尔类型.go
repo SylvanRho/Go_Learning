@@ -11,7 +11,7 @@ func main() {
 
 //字典Demo
 func mapDemo() {
-	fmt.Println("**********mapDemo**********")
+	fmt.Println("**********mapDemo**********\n")
 	// map[KEY_TYPE]VALUE_TYPE
 	// 声明初始化字典 三种！
 	// 第一种方法
@@ -33,7 +33,7 @@ func mapDemo() {
 
 //字典操作
 func mapOperationDemo() {
-	fmt.Printf("**********mapOperationDemo**********")
+	fmt.Printf("**********mapOperationDemo**********\n")
 	scores := make(map[string]int)
 	// 添加元素
 	scores["english"] = 80
@@ -50,7 +50,7 @@ func mapOperationDemo() {
 
 //字典是否包含用例
 func mapContainsDemo() {
-	fmt.Printf("**********mapContainsDemo**********")
+	fmt.Printf("**********mapContainsDemo**********\n")
 	scores := map[string]int{"English": 80, "Chinese": 75}
 	//判断key在不在
 	math, ok := scores["math"]
@@ -70,7 +70,7 @@ func mapContainsDemo() {
 
 //字典迭代用例
 func mapIterationDemo() {
-	fmt.Printf("**********mapIterationDemos**********")
+	fmt.Printf("**********mapIterationDemos**********\n")
 	scores := map[string]int{"english": 80, "chinese": 85}
 	// 循环还分三种
 
@@ -94,7 +94,7 @@ func mapIterationDemo() {
 }
 
 func boolDemo() {
-	fmt.Printf("**********boolDemo**********")
+	fmt.Printf("**********boolDemo**********\n")
 	// 在 Python 中使用 not 对逻辑值取反，而 Go 中使用 ! 符号
 	male := true
 	fmt.Println(!male == false)

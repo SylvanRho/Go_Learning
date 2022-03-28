@@ -25,7 +25,7 @@ func main() {
 
 //断言demo01
 func typeAssertionDemo01() {
-	fmt.Printf("**********typeAssertionDemo01**********")
+	fmt.Printf("**********typeAssertionDemo01**********\n")
 
 	defer func() {
 		if err := recover(); err != nil {
@@ -43,7 +43,7 @@ func typeAssertionDemo01() {
 
 //断言demo02
 func typeAssertionDemo02() {
-	fmt.Printf("**********typeAssertionDemo02**********")
+	fmt.Printf("**********typeAssertionDemo02**********\n")
 
 	var i interface{} = 10
 	t1, ok := i.(int)
@@ -73,7 +73,7 @@ func typeAssertionDemo02() {
 
 //查找类型
 func findType(i interface{}) {
-	fmt.Printf("**********findType**********")
+	fmt.Printf("**********findType**********\n")
 	switch x := i.(type) {
 	case int:
 		fmt.Println(x, "is int")

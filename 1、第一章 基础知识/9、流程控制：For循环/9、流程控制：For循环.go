@@ -23,7 +23,7 @@ func main() {
 
 //for循环的第一种情况（条件表达式）
 func forDemo01() {
-	fmt.Printf("**********forDemo01**********")
+	fmt.Printf("**********forDemo01**********\n")
 	a := 1
 	for a <= 5 {
 		fmt.Printf("%d \n", a)
@@ -33,7 +33,7 @@ func forDemo01() {
 
 //for循环的第二种情况(接三个表达式)
 func forDemo02() {
-	fmt.Printf("**********forDemo02**********")
+	fmt.Printf("**********forDemo02**********\n")
 	for i := 1; i <= 5; i++ {
 		fmt.Printf("%d \n", i)
 	}
@@ -41,7 +41,7 @@ func forDemo02() {
 
 //for循环的第三种情况(接 for-range 语句)
 func forDemo03() {
-	fmt.Printf("**********forDemo03**********")
+	fmt.Printf("**********forDemo03**********\n")
 	myarr := [...]string{"world", "python", "go"}
 	//range会返回两个 索引和数据，若你后面的代码用不到索引，需要使用 _ 表示 。
 	for _, item := range myarr {
@@ -51,7 +51,7 @@ func forDemo03() {
 
 //for循环的第四种情况（不接表达式：无限循环）
 func forDemo04() {
-	fmt.Printf("**********forDemo04**********")
+	fmt.Printf("**********forDemo04**********\n")
 	// for {
 	// 	代码块
 	// }

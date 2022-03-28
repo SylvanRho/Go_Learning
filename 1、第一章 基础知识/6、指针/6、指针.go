@@ -16,7 +16,7 @@ func main() {
 
 // 指针的创建
 func PointerCreateDemo() {
-	fmt.Printf("**********PointerCreateDemo**********")
+	fmt.Printf("**********PointerCreateDemo**********\n")
 	//三种方法
 
 	//第一种
@@ -52,7 +52,7 @@ func PointerCreateDemo() {
 
 //指针类型Demo
 func PointerTypeDemo() {
-	fmt.Printf("**********PointerTypeDemo**********")
+	fmt.Printf("**********PointerTypeDemo**********\n")
 	aint := 1
 	astr := "hello"
 	abool := false
@@ -73,7 +73,7 @@ func PointerTypeDemo() {
 
 //空地址指针
 func PointerAddressEmptyDemo() {
-	fmt.Printf("**********PointerAddressEmptyDemo**********")
+	fmt.Printf("**********PointerAddressEmptyDemo**********\n")
 	a := 25
 	var emptyPtr *int //声明一个空指针
 
@@ -86,7 +86,7 @@ func PointerAddressEmptyDemo() {
 
 //指针跟切片
 func PointerAndSliceDemo() {
-	fmt.Printf("**********PointerAndSliceDemo**********")
+	fmt.Printf("**********PointerAndSliceDemo**********\n")
 	// 如果我们想通过一个函数改变一个数组的值，有两种方法
 	// 1、将这个数组的切片做为参数传给函数
 	// 2、将这个数组的指针做为参数传给函数
