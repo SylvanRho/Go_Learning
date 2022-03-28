@@ -15,6 +15,9 @@ func main() {
 	// 关闭 channel 会产生一个广播机制，所有向 channel 读取消息的 goroutine 都会收到消息
 	// channel 在 Golang 中是一等公民，它是线程安全的，面对并发问题，应首先想到 channel。
 
+	//信道传递是深拷贝吗？
+	//答案是：是否是深拷贝，取决于你传入的值是值类型，还是引用类型？
+	//数据结构可以分为两种：
 	// 值类型 ：String，Array，Int，Struct，Float，Bool
 	// 引用类型：Slice，Map
 
