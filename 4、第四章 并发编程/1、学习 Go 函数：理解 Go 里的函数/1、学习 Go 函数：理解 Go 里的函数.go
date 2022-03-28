@@ -10,7 +10,7 @@ func main() {
 
 //函数的创建
 func funcCreateDemo() {
-	fmt.Printf("\n**********funcCreateDemo**********\n")
+	fmt.Printf("**********funcCreateDemo**********")
 
 	/*
 		//函数创建的语法
@@ -37,7 +37,7 @@ func funcCreateDemo() {
 }
 
 func sum(a int, b int) int {
-	fmt.Printf("\n**********sum**********\n")
+	fmt.Printf("**********sum**********")
 	return a + b
 }
 
@@ -51,7 +51,7 @@ func Sum(args ...int) int {
 //相同类型相加的方法
 // 使用 ...类型，表示一个元素为int类型的切片
 func theSameTypeParamSumFunc(args ...int) int {
-	fmt.Printf("\n**********theSameTypeParamSumFunc**********\n")
+	fmt.Printf("**********theSameTypeParamSumFunc**********")
 	var result int
 	for _, v := range args {
 		result += v
@@ -61,7 +61,7 @@ func theSameTypeParamSumFunc(args ...int) int {
 
 //不同类型的多个参数方法
 func differentTypeParamFunc(args ...interface{}) {
-	fmt.Printf("\n**********differentTypeParamFunc**********\n")
+	fmt.Printf("**********differentTypeParamFunc**********")
 
 	for _, arg := range args {
 		switch arg.(type) {
@@ -79,14 +79,14 @@ func differentTypeParamFunc(args ...interface{}) {
 
 //返回多个返回值
 func returnMultipleParam(a int) (int, int) {
-	fmt.Printf("\n**********returnMultipleParam**********\n")
+	fmt.Printf("**********returnMultipleParam**********")
 	b := a * 2
 	return a, b
 }
 
 //返回拥有变量名的值
 func returnHaveNameParam(a int) (b int, c int) {
-	fmt.Printf("\n**********returnHaveNameParam**********\n")
+	fmt.Printf("**********returnHaveNameParam**********")
 	b = a * 2
 	c = b * 2
 	return
@@ -94,7 +94,7 @@ func returnHaveNameParam(a int) (b int, c int) {
 
 //匿名函数Demo
 func anonymousFunctionDemo() {
-	fmt.Printf("\n**********anonymousFunctionDemo**********\n")
+	fmt.Printf("**********anonymousFunctionDemo**********")
 	/*
 		//定义
 		func(参数列表)(返回参数列表){

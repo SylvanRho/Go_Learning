@@ -11,7 +11,7 @@ func main() {
 //接口规则1
 //接口是一组固定的方法集，由于静态类型的限制，接口变量有时仅能调用其中特定的一些方法。
 func interfaceRule01() {
-	fmt.Printf("\n**********interfaceRule01**********\n")
+	fmt.Printf("**********interfaceRule01**********")
 
 	//因为我们的phone对象显示声明为 Phone 接口类型，因此 phone调用的方法会受到此接口的限制。
 	//因为接口中没有call_wechat方法 所以没法调用
@@ -49,7 +49,7 @@ func (phone IPhone) call_wechat() {
 //接口规则02
 //Go 语言中的函数调用都是值传递的，变量会在方法调用前进行类型转换。
 func interfaceRule02() {
-	fmt.Printf("\n**********interfaceRule02**********\n")
+	fmt.Printf("**********interfaceRule02**********")
 	a := "hello"
 	i := 15
 
@@ -80,7 +80,7 @@ func printType(i interface{}) {
 
 //接口规则3：类型断言中的隐式转换
 func interfaceRule03() {
-	fmt.Printf("\n**********interfaceRule03**********\n")
+	fmt.Printf("**********interfaceRule03**********")
 	var a interface{} = 25
 
 	//当类型断言完成后

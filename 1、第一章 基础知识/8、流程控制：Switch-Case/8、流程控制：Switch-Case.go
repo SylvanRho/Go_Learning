@@ -28,7 +28,7 @@ func main() {
 
 //switch简单Demo
 func switchSimpleDemo() {
-	fmt.Printf("\n**********switchSimpleDemo**********\n")
+	fmt.Printf("**********switchSimpleDemo**********")
 	education := "本科"
 	switch education {
 	case "博士":
@@ -48,7 +48,7 @@ func switchSimpleDemo() {
 
 //多个条件的Switch
 func multipleConditionsSwitch() {
-	fmt.Printf("\n**********multipleConditionsSwitch**********\n")
+	fmt.Printf("**********multipleConditionsSwitch**********")
 	month := 2
 
 	switch month {
@@ -87,7 +87,7 @@ func errorSwitch() {
 
 // switch后面跟函数
 func switchAppendFunc() {
-	fmt.Printf("\n**********switchAppendFunc**********\n")
+	fmt.Printf("**********switchAppendFunc**********")
 	chinese := 60
 	english := 45
 	math := 150
@@ -112,7 +112,7 @@ func getResult(args ...int) bool {
 
 //switch不接表达式
 func switchLikeIf_Else() {
-	fmt.Printf("\n**********switchLikeIf_Else**********\n")
+	fmt.Printf("**********switchLikeIf_Else**********")
 	score := 30
 	//switch 后可以不接任何变量、表达式、函数。
 	// switch 后可以不接任何变量、表达式、函数。
@@ -132,7 +132,7 @@ func switchLikeIf_Else() {
 
 //switch穿透能力
 func switchFallthrough() {
-	fmt.Printf("\n**********switchFallthrough**********\n")
+	fmt.Printf("**********switchFallthrough**********")
 	s := "hello"
 	// fallthrough 只能穿透一层，意思是它让你直接执行下一个case的语句，而且不需要判断条件。
 	//所以输出的是hello xxx

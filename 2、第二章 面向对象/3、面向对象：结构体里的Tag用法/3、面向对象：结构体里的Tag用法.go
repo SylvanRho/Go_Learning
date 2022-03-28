@@ -18,7 +18,7 @@ func main() {
 
 //使用Tag
 func usedTag() {
-	fmt.Printf("\n**********usedTag**********\n")
+	fmt.Printf("**********usedTag**********")
 	p1 := Person{
 		Name: "Jack",
 		Age:  22,
@@ -47,7 +47,7 @@ func usedTag() {
 
 //获取Tag
 func getTag(person Person) {
-	fmt.Printf("\n**********getTag**********\n")
+	fmt.Printf("**********getTag**********")
 	i := 0
 	// 三种获取 field
 	field01, _ := reflect.TypeOf(person).FieldByName("Name")
@@ -80,7 +80,7 @@ type Person struct {
 
 //一个Tag使用的小Demo
 func tagDemo() {
-	fmt.Printf("\n**********tagDemo**********\n")
+	fmt.Printf("**********tagDemo**********")
 	xm := Person{
 		Name: "xiaoming",
 		Age:  22,

@@ -10,7 +10,7 @@ func main() {
 
 //静态类型
 func staticType() {
-	fmt.Printf("\n**********staticType**********\n")
+	fmt.Printf("**********staticType**********")
 	// 所谓的静态类型（即 static type），就是变量声明的时候的类型。
 	var age int
 	var name string
@@ -21,7 +21,7 @@ func staticType() {
 
 //动态类型
 func dynamicType() {
-	fmt.Printf("\n**********dynamicType**********\n")
+	fmt.Printf("**********dynamicType**********")
 	//动态类型是程序运行时系统才能看见的类型。
 	var i interface{}
 	i = 19
@@ -32,7 +32,7 @@ func dynamicType() {
 
 //接口的组成
 func InterfaceComposition() {
-	fmt.Printf("\n**********InterfaceComposition**********\n")
+	fmt.Printf("**********InterfaceComposition**********")
 	//每个接口变量，实际上都是由一 pair 对（type 和 data）组合而成
 
 	//第一种普通创建

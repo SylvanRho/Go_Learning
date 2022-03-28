@@ -18,7 +18,7 @@ func main() {
 
 //一个简单的示例
 func gotoSimpleDemo01() {
-	fmt.Printf("\n**********gotoSimpleDemo01**********\n")
+	fmt.Printf("**********gotoSimpleDemo01**********")
 	// goto 可以打破原有代码执行顺序，直接跳转到某一行执行代码。
 	goto flag
 	fmt.Println("A") //不会执行
@@ -28,7 +28,7 @@ flag:
 
 //goto模仿For
 func gotoModeledFor() {
-	fmt.Printf("\n**********gotoModeledFor**********\n")
+	fmt.Printf("**********gotoModeledFor**********")
 	//打印1~5的循环
 	i := 1
 flag:
@@ -42,7 +42,7 @@ flag:
 //goto模仿Break
 func gotoModeledBreak() {
 	//使用 goto 实现 类型 break 的效果。
-	fmt.Printf("\n**********gotoModeledBreak**********\n")
+	fmt.Printf("**********gotoModeledBreak**********")
 	i := 1
 	for {
 		if i > 5 {
@@ -58,7 +58,7 @@ flag:
 //goto模仿Continue
 func gotoModeledContinue() {
 	//使用 goto 实现 类型 continue的效果，打印 1到10 的所有偶数。
-	fmt.Printf("\n**********gotoModeledContinue**********\n")
+	fmt.Printf("**********gotoModeledContinue**********")
 	i := 1
 flag:
 	for i <= 10 {

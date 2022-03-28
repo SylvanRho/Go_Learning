@@ -16,7 +16,7 @@ type Student struct {
 
 //new使用的Demo
 func newUsedDemo() {
-	fmt.Printf("\n**********newUsedDemo**********\n")
+	fmt.Printf("**********newUsedDemo**********")
 	//new 只能传递一个参数，该参数为一个任意类型，可以是Go语言内建的类型，也可以是你自定义的类型
 	num := new(int)
 	fmt.Println(*num) //打印零值：0
@@ -28,7 +28,7 @@ func newUsedDemo() {
 
 //make使用的Demo
 func makeUsedDemo() {
-	fmt.Printf("\n**********makeUsedDemo**********\n")
+	fmt.Printf("**********makeUsedDemo**********")
 	//内建函数 make 用来为 slice，map 或 chan 类型（注意：也只能用在这三种类型上）分配内存和初始化一个对象
 	//切片
 	a := make([]int, 2, 10)

@@ -21,7 +21,7 @@ func triggerPanic() {
 
 //捕获panic
 func captionPanic() {
-	fmt.Printf("\n**********captionPanic**********\n")
+	fmt.Printf("**********captionPanic**********")
 	set_data(20)
 
 	// 如果能执行到这句，说明panic被捕获了
@@ -46,7 +46,7 @@ func set_data(x int) {
 
 //跨携程的延迟语句
 func acrossGoroutineDefer() {
-	fmt.Printf("\n**********acrossGoroutineDefer**********\n")
+	fmt.Printf("**********acrossGoroutineDefer**********")
 
 	defer fmt.Println("in acrossGoroutineDefer")
 

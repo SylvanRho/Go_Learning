@@ -19,7 +19,7 @@ func main() {
 //第一定律
 //从接口变量到反射对象的转换。
 func reflectDemo01() {
-	fmt.Printf("\n**********reflectDemo01**********\n")
+	fmt.Printf("**********reflectDemo01**********")
 
 	// 为了实现从接口变量到反射对象的转换，需要提到 reflect 包里很重要的两个方法：
 	// 1、reflect.TypeOf(i) ：获得接口值的类型
@@ -40,7 +40,7 @@ func reflectDemo01() {
 //第二定律
 //从反射对象到接口变量的转换。
 func reflectDemo02() {
-	fmt.Printf("\n**********reflectDemo02**********\n")
+	fmt.Printf("**********reflectDemo02**********")
 
 	var age interface{} = 25
 
@@ -64,7 +64,7 @@ func reflectDemo02() {
 //第三定律
 //settable （可设置性，或可写性）
 func reflectDemo03() {
-	fmt.Printf("\n**********reflectDemo03**********\n")
+	fmt.Printf("**********reflectDemo03**********")
 
 	//Go 语言里的函数都是值传递，只要你传递的不是变量的指针，你在函数内部对变量的修改是不会影响到原始的变量的。
 	//所以如果传递的不是接口变量的指针，反射世界里的变量值始终将只是真实世界里的一个拷贝，你对该反射对象进行修改，并不能反映到真实世界里。

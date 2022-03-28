@@ -20,7 +20,7 @@ func main() {
 
 //空接口类型可以使用的类型
 func emptyInterfaceCanUsedType() {
-	fmt.Printf("\n**********emptyInterfaceCanUsedType**********\n")
+	fmt.Printf("**********emptyInterfaceCanUsedType**********")
 	var i interface{}
 
 	i = 10
@@ -35,7 +35,7 @@ func emptyInterfaceCanUsedType() {
 
 //函数使用空接口
 func funcUsedEmptyInterface() {
-	fmt.Printf("\n**********funcUsedEmptyInterface**********\n")
+	fmt.Printf("**********funcUsedEmptyInterface**********")
 	a := "a"
 	b := 10
 	c := false
@@ -51,7 +51,7 @@ func receiveAnyTypeFunc(ifaces ...interface{}) {
 
 //储存任意类型的空接口集合类型
 func StoreAnyTypeEmptyInterface() {
-	fmt.Printf("\n**********StoreAnyTypeEmptyInterface**********\n")
+	fmt.Printf("**********StoreAnyTypeEmptyInterface**********")
 	any := make([]interface{}, 5)
 	any = append(any, 1)
 	any[1] = "hello"
@@ -62,7 +62,7 @@ func StoreAnyTypeEmptyInterface() {
 }
 
 func pitForEmptyInterface() {
-	fmt.Printf("\n**********pitForEmptyInterface**********\n")
+	fmt.Printf("**********pitForEmptyInterface**********")
 
 	//pit1⚠️：空接口可以承载任意值，但不代表任意类型就可以承接空接口类型的值
 

@@ -33,7 +33,7 @@ type Person01 struct {
 //Kind函数
 //用于查看更深层次的类型
 func kindDemo() {
-	fmt.Printf("\n**********kindDemo**********\n")
+	fmt.Printf("**********kindDemo**********")
 
 	// Type 对象 和 Value 对象都可以通过 Kind() 方法返回对应的接口变量的基础类型。
 	// reflect.TypeOf(m).Kind()
@@ -70,7 +70,7 @@ func kindDemo() {
 
 //类型转换
 func typeConverter() {
-	fmt.Printf("\n**********typeConverter**********\n")
+	fmt.Printf("**********typeConverter**********")
 	reflectValue2IntDemo()
 	reflectValue2FloatDemo()
 	reflectValue2StringDemo()
@@ -81,7 +81,7 @@ func typeConverter() {
 
 //反射value转int
 func reflectValue2IntDemo() {
-	fmt.Printf("\n**********reflectValue2IntDemo**********\n")
+	fmt.Printf("**********reflectValue2IntDemo**********")
 	var age int = 25
 
 	v1 := reflect.ValueOf(age)
@@ -92,7 +92,7 @@ func reflectValue2IntDemo() {
 
 //反射value转float
 func reflectValue2FloatDemo() {
-	fmt.Printf("\n**********reflectValue2FloatDemo**********\n")
+	fmt.Printf("**********reflectValue2FloatDemo**********")
 
 	var score float64 = 99.5
 
@@ -104,7 +104,7 @@ func reflectValue2FloatDemo() {
 
 //反射Value转string
 func reflectValue2StringDemo() {
-	fmt.Printf("\n**********reflectValue2StringDemo**********\n")
+	fmt.Printf("**********reflectValue2StringDemo**********")
 
 	var name string = "Hello"
 
@@ -116,7 +116,7 @@ func reflectValue2StringDemo() {
 
 //反射Value转bool
 func reflectValue2BoolDemo() {
-	fmt.Printf("\n**********reflectreflectValue2BoolDemoValue2StringDemo**********\n")
+	fmt.Printf("**********reflectreflectValue2BoolDemoValue2StringDemo**********")
 
 	var isMale bool = false
 
@@ -128,7 +128,7 @@ func reflectValue2BoolDemo() {
 
 //反射Value转指针
 func reflectValue2PointerDemo() {
-	fmt.Printf("\n**********reflectValue2PointerDemo**********\n")
+	fmt.Printf("**********reflectValue2PointerDemo**********")
 
 	var age int = 25
 
@@ -140,7 +140,7 @@ func reflectValue2PointerDemo() {
 
 //反射Value转接口
 func reflectValue2InterfaceDemo() {
-	fmt.Printf("\n**********reflectValue2InterfaceDemo**********\n")
+	fmt.Printf("**********reflectValue2InterfaceDemo**********")
 	var age int = 25
 
 	v1 := reflect.ValueOf(age)
@@ -151,7 +151,7 @@ func reflectValue2InterfaceDemo() {
 
 //切片的反射Demo
 func sliceReflectDemo() {
-	fmt.Printf("\n**********sliceReflectDemo**********\n")
+	fmt.Printf("**********sliceReflectDemo**********")
 
 	reflectValue2Slice()
 	updateSlice()
@@ -159,7 +159,7 @@ func sliceReflectDemo() {
 
 //反射Value转切片
 func reflectValue2Slice() {
-	fmt.Printf("\n**********reflectValue2Slice**********\n")
+	fmt.Printf("**********reflectValue2Slice**********")
 	var numList []int = []int{1, 2, 3, 4}
 
 	v1 := reflect.ValueOf(numList)
@@ -177,7 +177,7 @@ func reflectValue2Slice() {
 
 //更新切片
 func updateSlice() {
-	fmt.Printf("\n**********updateSlice**********\n")
+	fmt.Printf("**********updateSlice**********")
 
 	arr := []int{1, 2}
 	appendToSlice(&arr)
@@ -197,7 +197,7 @@ func appendToSlice(arrPtr interface{}) {
 
 //属性反射Demo
 func fieldsReflectDemo() {
-	fmt.Printf("\n**********fieldsReflectDemo**********\n")
+	fmt.Printf("**********fieldsReflectDemo**********")
 	person := Person{
 		name:   "小明",
 		age:    22,
@@ -235,7 +235,7 @@ func (p Person01) SayByeReturnString() string {
 
 //方法反射Demo
 func methodsReflectDemo() {
-	fmt.Printf("\n**********methodsReflectDemo**********\n")
+	fmt.Printf("**********methodsReflectDemo**********")
 	p := &Person{}
 
 	t := reflect.TypeOf(p)
@@ -252,7 +252,7 @@ func methodsReflectDemo() {
 
 //动态调用反射的方法
 func dynamicCallingReflectFunc() {
-	fmt.Printf("\n**********dynamicCallingReflectFunc**********\n")
+	fmt.Printf("**********dynamicCallingReflectFunc**********")
 	dynamicCallingReflectFuncDemo01()
 	dynamicCallingReflectFuncDemo02()
 	dynamicCallingReflectFuncDemo03()
@@ -260,7 +260,7 @@ func dynamicCallingReflectFunc() {
 
 //动态调用函数（使用索引且无参数）
 func dynamicCallingReflectFuncDemo01() {
-	fmt.Printf("\n**********dynamicCallingReflectFuncDemo01**********\n")
+	fmt.Printf("**********dynamicCallingReflectFuncDemo01**********")
 	//要调用 Call，注意要使用 ValueOf
 
 	p := Person01{}
@@ -279,7 +279,7 @@ func dynamicCallingReflectFuncDemo01() {
 
 //动态调用函数（使用函数名且无参数）
 func dynamicCallingReflectFuncDemo02() {
-	fmt.Printf("\n**********dynamicCallingReflectFuncDemo02**********\n")
+	fmt.Printf("**********dynamicCallingReflectFuncDemo02**********")
 
 	p := Person{}
 
@@ -297,7 +297,7 @@ func (p *Person) SelfIntroduction(name string, age int) {
 
 //动态调用函数（使用函数且有参数）
 func dynamicCallingReflectFuncDemo03() {
-	fmt.Printf("\n**********dynamicCallingReflectFuncDemo02**********\n")
+	fmt.Printf("**********dynamicCallingReflectFuncDemo02**********")
 
 	p := &Person{}
 

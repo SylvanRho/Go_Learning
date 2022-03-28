@@ -23,7 +23,7 @@ func (l lemp) Off() {
 
 //空结构体的使用Demo
 func emptyStructUsedDemo() {
-	fmt.Printf("\n**********emptyStructUsedDemo**********\n")
+	fmt.Printf("**********emptyStructUsedDemo**********")
 
 	l := lemp{}
 	l.On()
@@ -34,7 +34,7 @@ func emptyStructUsedDemo() {
 
 //信道使用空结构体
 func chanUsedEmptyStructDemo() {
-	fmt.Printf("\n**********chanUsedEmptyStructDemo**********\n")
+	fmt.Printf("**********chanUsedEmptyStructDemo**********")
 
 	ch := make(chan struct{}, 1)
 	go func() {

@@ -18,7 +18,7 @@ func main() {
 
 //初始化结构体
 func initStruct() {
-	fmt.Printf("\n**********initStruct**********\n")
+	fmt.Printf("**********initStruct**********")
 	//声明结构体
 	// type 结构体名 struct {
 	// 	属性名   属性类型
@@ -50,7 +50,7 @@ type Profile struct {
 
 //实体绑定方法
 func (person Profile) FmtProfile() {
-	fmt.Printf("\n**********FmtProfile**********\n")
+	fmt.Printf("**********FmtProfile**********")
 	fmt.Printf("名字：%s\n", person.name)
 	fmt.Printf("年龄：%d\n", person.age)
 	fmt.Printf("性别：%s\n", person.gender)
@@ -58,13 +58,13 @@ func (person Profile) FmtProfile() {
 
 //假如要在方法里更改对象的属性值  类型要加*号
 func (person *Profile) increase_age() {
-	fmt.Printf("\n**********increase_age**********\n")
+	fmt.Printf("**********increase_age**********")
 	person.age += 1
 }
 
 //结构体的"继承"
 func inheritanceByStruct() {
-	fmt.Printf("\n**********inheritanceByStruct**********\n")
+	fmt.Printf("**********inheritanceByStruct**********")
 
 	myCom := company{
 		companyName: "Tencent",
@@ -100,7 +100,7 @@ type staff struct {
 //实例化
 //第一种：正常实例化
 func createStructDemo01() {
-	fmt.Printf("\n**********createStructDemo01**********\n")
+	fmt.Printf("**********createStructDemo01**********")
 	xm := Profile{
 		name:   "小明",
 		age:    18,
@@ -111,7 +111,7 @@ func createStructDemo01() {
 
 //第二种：使用 new
 func createStructDemo02() {
-	fmt.Printf("\n**********createStructDemo02**********\n")
+	fmt.Printf("**********createStructDemo02**********")
 	// 等价于: var xm *Profile = new(Profile)
 	xm := new(Profile)
 	// output: &{ 0 }
@@ -126,7 +126,7 @@ func createStructDemo02() {
 
 //第三种：使用 &
 func createStructDemo03() {
-	fmt.Printf("\n**********createStructDemo03**********\n")
+	fmt.Printf("**********createStructDemo03**********")
 	var xm *Profile = &Profile{}
 	fmt.Println(xm)
 	// output: &{ 0 }
@@ -139,7 +139,7 @@ func createStructDemo03() {
 
 //选择器的Demo
 func selectorDemo() {
-	fmt.Printf("\n**********selectorDemo**********\n")
+	fmt.Printf("**********selectorDemo**********")
 	p1 := &Profile{name: "iswbm"}
 	//当你对象是结构体对象的指针时，你想要获取字段属性时，按照常规理解应该这么做
 	fmt.Println((*p1).name)
