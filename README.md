@@ -120,3 +120,8 @@ var LintGonicMapper = GonicMapper{
     "XSRF":  true,
     "XSS":   true,
 ```
+
+# 暂时不理解的问题
+- 为什么sync.Mutex传递的时候要加*号
+- 为什么切片在循环里面 append数据不会报错 且不会改变数据大小 循环结束以后是改变后的数据
+- 为什么 for range 信道 只要不close 会一直等待发送方发消息
