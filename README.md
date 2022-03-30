@@ -125,4 +125,5 @@ var LintGonicMapper = GonicMapper{
 - [ ] 为什么sync.Mutex传递的时候要加*号
 - [x] 为什么切片在循环里面 append数据不会报错 且不会改变数据大小 循环结束以后是改变后的数据
     - range 返回的是每个元素的副本，而不是直接返回对该元素的引用
+    - 参考文章：[Go语言range关键字：循环迭代切片](http://c.biancheng.net/view/4118.html)。
 - [ ] 为什么 for range 信道 只要不close 会一直等待发送方发消息
