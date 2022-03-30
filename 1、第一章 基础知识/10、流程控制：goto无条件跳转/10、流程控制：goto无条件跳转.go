@@ -21,7 +21,8 @@ func gotoSimpleDemo01() {
 	fmt.Printf("**********gotoSimpleDemo01**********\n")
 	// goto 可以打破原有代码执行顺序，直接跳转到某一行执行代码。
 	goto flag
-	fmt.Println("A") //不会执行
+	//不会执行
+	//fmt.Println("A")
 flag:
 	fmt.Println("B")
 }

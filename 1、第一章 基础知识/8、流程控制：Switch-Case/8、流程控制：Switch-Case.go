@@ -22,7 +22,9 @@ func main() {
 	// }
 	switchSimpleDemo()
 	multipleConditionsSwitch()
+	errorSwitch()
 	switchAppendFunc()
+	switchLikeIfelse()
 	switchFallthrough()
 }
 
@@ -67,6 +69,7 @@ func multipleConditionsSwitch() {
 
 //错误的Switch
 func errorSwitch() {
+	fmt.Printf("**********errorSwitch**********\n")
 	gender := "male"
 	//同时出现先两个一样的
 	// switch gender {
@@ -111,10 +114,9 @@ func getResult(args ...int) bool {
 }
 
 //switch不接表达式
-func switchLikeIf_Else() {
-	fmt.Printf("**********switchLikeIf_Else**********\n")
+func switchLikeIfelse() {
+	fmt.Printf("**********switchLikeIfelse**********\n")
 	score := 30
-	//switch 后可以不接任何变量、表达式、函数。
 	// switch 后可以不接任何变量、表达式、函数。
 	switch {
 	case score >= 95 && score <= 100:

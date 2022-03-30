@@ -6,12 +6,12 @@ import (
 
 func main() {
 	mapDemo()
-	fmt.Println()
+	boolDemo()
 }
 
 //字典Demo
 func mapDemo() {
-	fmt.Println("**********mapDemo**********\n")
+	fmt.Printf("**********mapDemo**********\n")
 	// map[KEY_TYPE]VALUE_TYPE
 	// 声明初始化字典 三种！
 	// 第一种方法
@@ -70,12 +70,13 @@ func mapContainsDemo() {
 
 //字典迭代用例
 func mapIterationDemo() {
-	fmt.Printf("**********mapIterationDemos**********\n")
+	fmt.Printf("**********mapIterationDemo**********\n")
 	scores := map[string]int{"english": 80, "chinese": 85}
 	// 循环还分三种
 
 	//第一种
 	fmt.Println("First Iteration")
+	//subject就是key score就是value
 	for subject, score := range scores {
 		fmt.Printf("score subject: %s，score：%d \n", subject, score)
 	}

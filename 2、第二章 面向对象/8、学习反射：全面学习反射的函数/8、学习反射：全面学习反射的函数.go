@@ -158,6 +158,7 @@ func sliceReflectDemo() {
 }
 
 //反射Value转切片
+//切片再切片
 func reflectValue2Slice() {
 	fmt.Printf("**********reflectValue2Slice**********\n")
 	var numList []int = []int{1, 2, 3, 4}

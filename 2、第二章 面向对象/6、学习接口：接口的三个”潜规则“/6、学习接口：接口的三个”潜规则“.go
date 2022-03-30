@@ -56,7 +56,8 @@ func interfaceRule02() {
 	printType(a)
 	printType(i)
 
-	//如果想在方法内部写 就需要显性转化一下
+	//如果想在方法内部写 就需要显性转化一下 转换成空接口
+	//跟printType方法是一样的
 	switch interface{}(a).(type) {
 	case string:
 		fmt.Println("参数的类型是 string")

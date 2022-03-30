@@ -6,6 +6,13 @@ import (
 	"reflect"
 )
 
+type Person struct {
+	Name string `json:"name" label:"Name is: "`
+	Age  int    `json:"age" label:"Age is: "`
+	//只要发现对象里的 Addr 为 false， 0， 空指针，空接口，空数组，空切片，空映射，空字符串中的一种，就会被忽略。
+	Addr string `json:"addr,omitempty" label:"Gender is: " default:"unknown"`
+}
+
 func main() {
 	usedTag()
 	p := Person{
@@ -24,6 +31,7 @@ func usedTag() {
 		Age:  22,
 	}
 
+	//json.Marshal加密成json字符串
 	data1, err := json.Marshal(p1)
 	if err != nil {
 		fmt.Println(err)
@@ -63,19 +71,13 @@ func getTag(person Person) {
 	// 其实 Get 只是对 Lookup 函数的简单封装而已，当没有获取到对应 tag 的内容，会返回空字符串。
 	jsonValue := tag01.Get("json")
 	fmt.Println("jsonValue01：", jsonValue)
+	//lookup返回的代表是否查询到对应的内容
 	jsonValue02, _ := tag02.Lookup("json")
 	fmt.Println("jsonValue01：", jsonValue02)
 
 	jsonvalue03 := tag03.Get("json")
 	fmt.Println("jsonvalue03：", jsonvalue03)
 
-}
-
-type Person struct {
-	Name string `json:"name" label:"Name is: "`
-	Age  int    `json:"age" label:"Age is: "`
-	//只要发现对象里的 Addr 为 false， 0， 空指针，空接口，空数组，空切片，空映射，空字符串中的一种，就会被忽略。
-	Addr string `json:"addr,omitempty" label:"Gender is: " default:"unknown"`
 }
 
 //一个Tag使用的小Demo
@@ -92,6 +94,7 @@ func Print(obj interface{}) error {
 	//取value
 	v := reflect.ValueOf(obj)
 	// 解析字段
+	//NumField()拿到所有的属性数量
 	for i := 0; i < v.NumField(); i++ {
 		field := v.Type().Field(i)
 		tag := field.Tag
