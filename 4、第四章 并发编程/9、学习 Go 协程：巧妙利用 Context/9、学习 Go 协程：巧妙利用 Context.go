@@ -29,6 +29,14 @@ func main() {
 			返回被绑定到 Context 的值，是一个键值对，所以要通过一个Key才可以获取对应的值，这个值一般是线程安全的。
 	*/
 
+	//注意⚠️
+	// 1、通常 Context 都是做为函数的第一个参数进行传递（规范性做法），并且变量名建议统一叫 ctx
+	// 2、Context 是线程安全的，可以放心地在多个 goroutine 中使用。
+	// 3、当你把 Context 传递给多个 goroutine 使用时，只要执行一次 cancel 操作，所有的 goroutine 就可以收到 取消的信号
+	// 4、不要把原本可以由函数参数来传递的变量，交给 Context 的 Value 来传递。
+	// 5、当一个函数需要接收一个 Context 时，但是此时你还不知道要传递什么 Context 时，可以先用 context.TODO 来代替，而不要选择传递一个 nil。
+	// 6、当一个 Context 被 cancel 时，继承自该 Context 的所有 子 Context 都会被 cancel。
+
 	simpleContextUsedDemo()
 	contextWithDeadlineDemo()
 	contextTimeoutDemo()
