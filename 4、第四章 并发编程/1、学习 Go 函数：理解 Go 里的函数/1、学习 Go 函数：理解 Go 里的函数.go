@@ -12,8 +12,7 @@ func main() {
 func funcCreateDemo() {
 	fmt.Printf("**********funcCreateDemo**********\n")
 
-	/*
-		//函数创建的语法
+	/*	函数创建的语法
 		func 函数名(形式参数列表)(返回值列表){
 			函数体
 		}
@@ -95,8 +94,7 @@ func returnHaveNameParam(a int) (b int, c int) {
 //匿名函数Demo
 func anonymousFunctionDemo() {
 	fmt.Printf("**********anonymousFunctionDemo**********\n")
-	/*
-		//定义
+	/*	定义语法
 		func(参数列表)(返回参数列表){
 			函数体
 		}

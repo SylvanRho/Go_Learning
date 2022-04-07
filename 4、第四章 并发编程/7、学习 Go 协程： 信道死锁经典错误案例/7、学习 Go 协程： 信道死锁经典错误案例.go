@@ -19,8 +19,7 @@ func printChanContent(ch chan string, wg *sync.WaitGroup) {
 //无缓冲死锁Demo
 func noBufferDeadLockDemo() {
 	fmt.Printf("**********noBufferDeadLockDemo**********\n")
-	/*
-		//错误示范
+	/*	错误示范
 		pipline := make(chan string)
 		pipline <- "hello world"
 		fmt.Println(<-pipline)
