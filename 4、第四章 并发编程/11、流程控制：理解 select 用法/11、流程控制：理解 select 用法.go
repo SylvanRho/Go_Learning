@@ -17,6 +17,14 @@ func main() {
 			<code>
 		}
 	*/
+
+	/*	总结👌
+		select 只能用于 channel 的操作(写入/读出/关闭)，而 switch 则更通用一些；
+		select 的 case 是随机的，而 switch 里的 case 是顺序执行；
+		select 要注意避免出现死锁，同时也可以自行实现超时机制；
+		select 里没有类似 switch 里的 fallthrough 的用法；
+		select 不能像 switch 一样接函数或其他表达式。
+	*/
 	simpleSelectDemo()
 
 	timeOutSelectDemo()
@@ -85,18 +93,18 @@ func writeAndReadSelectDemo() {
 }
 
 //检测关闭信道的Select
-func checkCloseSelectDemo(){
+func checkCloseSelectDemo() {
 	fmt.Printf("**********checkCloseSelectDemo**********\n")
 	c1 := make(chan int, 1)
-    c2 := make(chan int, 1)
-    close(c1)
-    for {
-        select {
-        case <-c1:
-            fmt.Println("stop");
+	c2 := make(chan int, 1)
+	close(c1)
+	for {
+		select {
+		case <-c1:
+			fmt.Println("stop")
 			return
-        case <-c2:
-            fmt.Println("hhh")
-        }
-    }
+		case <-c2:
+			fmt.Println("hhh")
+		}
+	}
 }
