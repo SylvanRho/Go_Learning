@@ -2,6 +2,8 @@
 
 这是学习Go的代码库
 
+#### 在Go语言中接口（interface）是一种类型，一种抽象的类型。
+
 ## fmt Printf语法
 + %b    表示为二进制
 + %c    该值对应的unicode码值
