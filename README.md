@@ -123,8 +123,14 @@ var LintGonicMapper = GonicMapper{
     "XSS":   true,
 ```
 
+## 互联网分层模型
+![1](https://user-images.githubusercontent.com/51361195/174218696-c81be1d2-33d4-4d3d-8cf1-5bff247be655.png)
+![2](https://user-images.githubusercontent.com/51361195/174218742-c37f0d00-75f0-433a-a75c-10a4f67a645f.png)
+
+
 # 暂时不理解的问题
-- [ ] 为什么sync.Mutex传递的时候要加*号
+- [x] 为什么sync.Mutex传递的时候要加*号
+    - 因为带*是引用类型传递，而不带*是值类型传递，跟原本的锁地址就不同了
 - [x] 为什么切片在循环里面 append数据不会报错 且不会改变数据大小 循环结束以后是改变后的数据
     - range 返回的是每个元素的副本，而不是直接返回对该元素的引用
     - 参考文章：[Go语言range关键字：循环迭代切片](http://c.biancheng.net/view/4118.html)。
